@@ -1,0 +1,20 @@
+Default: &defaults
+  database: mySite.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: mySite_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: mySite_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: mySite_production.sqlite3
+  poolsize: 100
+  <<: *defaults
